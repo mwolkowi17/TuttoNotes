@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="EntryForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="NotesList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

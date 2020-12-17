@@ -17,6 +17,6 @@
         </ListView.ItemTemplate>
         
     </ListView>
-        <Button x:Name="AddNew" Text="Add Note"/>
+        <Button x:Name="AddNew" Text="Add Note" Clicked="AddNew_Clicked"/>
     </StackLayout>
 </ContentPage>

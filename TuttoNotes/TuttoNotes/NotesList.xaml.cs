@@ -31,5 +31,10 @@ namespace TuttoNotes
             NotesListView.ItemsSource = _notes;
             base.OnAppearing();
         }
+
+        private void AddNew_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EntryForm());
+        }
     }
 }
