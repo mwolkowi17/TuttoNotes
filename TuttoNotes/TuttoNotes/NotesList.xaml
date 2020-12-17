@@ -5,8 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TuttoNotes.NotesList">
-
-    <ListView x:Name="NotesListView">
+    <StackLayout>
+        <SearchBar x:Name="SearchNotes" Placeholder="Search..."/>
+        <ListView x:Name="NotesListView">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Title}" Detail="{Binding NoteDate}">
@@ -16,5 +17,6 @@
         </ListView.ItemTemplate>
         
     </ListView>
-    
+        <Button x:Name="AddNew" Text="Add Note"/>
+    </StackLayout>
 </ContentPage>
