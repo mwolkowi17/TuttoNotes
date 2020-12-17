@@ -10,7 +10,7 @@ namespace TuttoNotes
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new NotesList());
         }
 
         protected override void OnStart()
