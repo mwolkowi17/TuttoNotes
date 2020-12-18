@@ -36,5 +36,14 @@ namespace TuttoNotes
         {
             Navigation.PushAsync(new EntryForm());
         }
+
+        private void NotesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+                return;
+            var noteToDisplay = e.SelectedItem as Note;
+            Navigation.PushAsync(new NoteDetails(noteToDisplay));
+            NotesListView.SelectedItem = null;
+        }
     }
 }

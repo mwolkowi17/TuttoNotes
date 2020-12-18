@@ -7,7 +7,7 @@
              x:Class="TuttoNotes.NotesList">
     <StackLayout>
         <SearchBar x:Name="SearchNotes" Placeholder="Search..."/>
-        <ListView x:Name="NotesListView">
+        <ListView x:Name="NotesListView" ItemSelected="NotesListView_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Title}" Detail="{Binding NoteDate}">
