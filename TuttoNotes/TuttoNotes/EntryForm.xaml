@@ -6,13 +6,17 @@
              mc:Ignorable="d"
              x:Class="TuttoNotes.EntryForm">
     <StackLayout>
-        <TableView Intent="Form">
+        <Entry Placeholder="New Title"/>
+        <Editor Placeholder="Note..."  VerticalOptions="FillAndExpand"/>
+        <DatePicker/>
+        <TimePicker/>
+        <!--<TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Entry Name">
 
                     <EntryCell x:Name="namecell"  Placeholder="Title" Keyboard="Text"  />
 
-                    <EntryCell x:Name="bodycell" Placeholder="Note" Keyboard="Text"/>
+                    <TextCell x:Name="bodycell"/>
                 </TableSection>
                 <TableSection Title="Details">
                     <EntryCell x:Name="additionlcell" Placeholder="Aditional Info" Keyboard="Text"/>
@@ -21,7 +25,7 @@
 
             </TableRoot>
 
-        </TableView>
-        <Button Text="add contact"/>
+        </TableView>-->
+        <Button Text="add note"/>
     </StackLayout>
 </ContentPage>
