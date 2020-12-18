@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              x:Class="TuttoNotes.EntryForm">
     <StackLayout>
-        <Entry Placeholder="New Title"/>
-        <Editor Placeholder="Note..."  VerticalOptions="FillAndExpand"/>
-        <DatePicker/>
-        <TimePicker/>
+        <Entry x:Name="NoteTilte" Placeholder="New Title"/>
+        <Editor x:Name="NoteBody" Placeholder="Note..."  VerticalOptions="FillAndExpand"/>
+        <DatePicker x:Name="NoteDate" Date="{x:Static sys:DateTime.Today}"/>
+       
         <!--<TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Entry Name">
@@ -26,6 +27,6 @@
             </TableRoot>
 
         </TableView>-->
-        <Button Text="add note"/>
+        <Button Text="add note" Clicked="Button_Clicked"/>
     </StackLayout>
 </ContentPage>
