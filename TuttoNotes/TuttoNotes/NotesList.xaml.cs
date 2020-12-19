@@ -45,5 +45,16 @@ namespace TuttoNotes
             Navigation.PushAsync(new NoteDetails(noteToDisplay));
             NotesListView.SelectedItem = null;
         }
+
+        async private void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var menuitem = sender as MenuItem;
+            var noteToDelete = menuitem.CommandParameter as Note;
+            await _connection.DeleteAsync(noteToDelete);
+            var notes = await _connection.Table<Note>().ToListAsync();
+            _notes = new ObservableCollection<Note>(notes);
+            NotesListView.ItemsSource = _notes;
+
+        }
     }
 }

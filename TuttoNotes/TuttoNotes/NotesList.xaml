@@ -12,8 +12,8 @@
             <DataTemplate>
                 <TextCell Text="{Binding Title}" Detail="{Binding NoteDate}">
                         <TextCell.ContextActions>
-                            <MenuItem/>
-                            <MenuItem/>
+                            <MenuItem Text="Update" CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Delete" CommandParameter="{Binding .}" Clicked="MenuItem_Clicked"/>
                         </TextCell.ContextActions>
                 </TextCell>
             </DataTemplate>
