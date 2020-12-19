@@ -56,5 +56,12 @@ namespace TuttoNotes
             NotesListView.ItemsSource = _notes;
 
         }
+
+        async private void MenuItem_Clicked_1(object sender, EventArgs e)
+        {
+            var menuitem = sender as MenuItem;
+            var noteSelected = menuitem.CommandParameter as Note;
+            await Navigation.PushAsync(new NoteUpdate(noteSelected));
+        }
     }
 }
