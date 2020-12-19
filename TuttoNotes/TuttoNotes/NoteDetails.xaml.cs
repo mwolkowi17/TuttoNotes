@@ -14,6 +14,9 @@ namespace TuttoNotes
     {
         public NoteDetails(Note note)
         {
+            if (note == null)
+                throw new ArgumentNullException();
+            BindingContext = note;
             InitializeComponent();
         }
     }

@@ -11,7 +11,10 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Title}" Detail="{Binding NoteDate}">
-                    
+                        <TextCell.ContextActions>
+                            <MenuItem/>
+                            <MenuItem/>
+                        </TextCell.ContextActions>
                 </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
