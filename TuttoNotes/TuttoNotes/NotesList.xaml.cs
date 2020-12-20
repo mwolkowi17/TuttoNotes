@@ -63,5 +63,21 @@ namespace TuttoNotes
             var noteSelected = menuitem.CommandParameter as Note;
             await Navigation.PushAsync(new NoteUpdate(noteSelected));
         }
+
+        async private void SearchNotes_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var notes = await _connection.Table<Note>().ToListAsync();
+            _notes = new ObservableCollection<Note>(notes);
+
+            var searchedNotes = _notes.Where(n => n.Title == e.NewTextValue).ToList();
+            if (e.NewTextValue == "")
+            {
+                NotesListView.ItemsSource = _notes;
+            }
+            else
+            {
+                NotesListView.ItemsSource = searchedNotes;
+            }
+        }
     }
 }

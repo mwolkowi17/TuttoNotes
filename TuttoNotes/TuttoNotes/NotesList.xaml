@@ -7,14 +7,14 @@
              x:Class="TuttoNotes.NotesList"
             >
     <NavigationPage.TitleView>
-        <Label Text="Tutto Notes" HorizontalOptions="Center"/>
+        <Label Text="TUTTO Notes" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
     </NavigationPage.TitleView>
     <StackLayout>
-        <SearchBar x:Name="SearchNotes" Placeholder="Search..."/>
+        <SearchBar x:Name="SearchNotes" Placeholder="Search..." TextChanged="SearchNotes_TextChanged"/>
         <ListView x:Name="NotesListView" ItemSelected="NotesListView_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Title}" Detail="{Binding NoteDate}">
+                <TextCell Text="{Binding Title}" Detail="{Binding NoteDate}" TextColor="Blue">
                         <TextCell.ContextActions>
                             <MenuItem Text="Update" CommandParameter="{Binding .}" Clicked="MenuItem_Clicked_1"/>
                             <MenuItem Text="Delete" CommandParameter="{Binding .}" Clicked="MenuItem_Clicked"/>
