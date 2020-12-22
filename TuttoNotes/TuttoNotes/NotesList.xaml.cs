@@ -50,10 +50,12 @@ namespace TuttoNotes
         {
             var menuitem = sender as MenuItem;
             var noteToDelete = menuitem.CommandParameter as Note;
-            await _connection.DeleteAsync(noteToDelete);
-            var notes = await _connection.Table<Note>().ToListAsync();
-            _notes = new ObservableCollection<Note>(notes);
-            NotesListView.ItemsSource = _notes;
+            await Navigation.PushModalAsync(new DeleteConfirm(noteToDelete));
+
+            //await _connection.DeleteAsync(noteToDelete);
+            //var notes = await _connection.Table<Note>().ToListAsync();
+            //_notes = new ObservableCollection<Note>(notes);
+            //NotesListView.ItemsSource = _notes;
 
         }
 
