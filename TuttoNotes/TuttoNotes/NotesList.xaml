@@ -20,6 +20,13 @@
                             <MenuItem Text="Delete" CommandParameter="{Binding .}" Clicked="MenuItem_Clicked"/>
                         </TextCell.ContextActions>
                 </TextCell>
+                
+                <!--
+                <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                        </StackLayout>
+                </ViewCell>
+                -->
             </DataTemplate>
         </ListView.ItemTemplate>
         
