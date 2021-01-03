@@ -27,7 +27,7 @@
                             <Label Text="Note:" FontAttributes="Bold"/>
                             <StackLayout HorizontalOptions="StartAndExpand" >
                             <Label Text="{Binding Title }" TextColor="CadetBlue"/>
-                            <Label Text="{Binding NoteDate}"/>
+                            <Label Text="{Binding NoteDate, StringFormat='{0:MMMM dd, yyyy}'}"/>
                         </StackLayout>
                         </StackLayout>
                     </ViewCell>
