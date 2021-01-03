@@ -23,13 +23,17 @@
                 -->
                 
                 <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Note:" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal" Padding="5,0,0,0">
+                            <Label Text="Title:" FontAttributes="Bold"/>
                             <StackLayout HorizontalOptions="StartAndExpand" >
-                            <Label Text="{Binding Title }" TextColor="CadetBlue"/>
+                                <Label Text="{Binding Title }" TextColor="CadetBlue" FontAttributes="Bold"/>
                             <Label Text="{Binding NoteDate, StringFormat='{0:MMMM dd, yyyy}'}"/>
                         </StackLayout>
                         </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Update" CommandParameter="{Binding .}" Clicked="MenuItem_Clicked_1"/>
+                            <MenuItem Text="Delete" CommandParameter="{Binding .}" Clicked="MenuItem_Clicked"/>
+                        </ViewCell.ContextActions>
                     </ViewCell>
                 
             </DataTemplate>
