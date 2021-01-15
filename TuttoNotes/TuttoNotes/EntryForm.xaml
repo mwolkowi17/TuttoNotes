@@ -8,9 +8,11 @@
              x:Class="TuttoNotes.EntryForm">
     <StackLayout>
         <Entry x:Name="NoteTilte" Placeholder="New Title"/>
+
         <Editor x:Name="NoteBody" Placeholder="Note..."  VerticalOptions="FillAndExpand"/>
+
         <DatePicker x:Name="NoteDate" Date="{x:Static sys:DateTime.Today}"/>
-       
+
         <!--<TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Entry Name">
