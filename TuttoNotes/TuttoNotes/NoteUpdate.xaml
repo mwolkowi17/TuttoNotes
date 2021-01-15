@@ -5,12 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TuttoNotes.NoteUpdate">
-    <StackLayout>
-        <Entry x:Name="NoteTilte" Text="{Binding Title}"/>
-        <Editor x:Name="NoteBody" Text="{Binding Body}"  VerticalOptions="FillAndExpand"/>
-        <DatePicker x:Name="NoteDate" Date="{Binding NoteDate}"/>
+    <ScrollView>
+        <StackLayout>
+            <Entry x:Name="NoteTilte" Text="{Binding Title}"/>
+            <Editor x:Name="NoteBody" Text="{Binding Body}"  VerticalOptions="FillAndExpand"/>
+            <DatePicker x:Name="NoteDate" Date="{Binding NoteDate}"/>
 
-        <!--<TableView Intent="Form">
+            <!--<TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Entry Name">
 
@@ -26,7 +27,9 @@
             </TableRoot>
 
         </TableView>-->
-        <Button Text="Update note" Clicked="Button_Clicked" CommandParameter="{Binding .}"/>
-    </StackLayout>
+            <Button Text="Update note" Clicked="Button_Clicked" CommandParameter="{Binding .}"/>
+        </StackLayout>
+    </ScrollView>
+    
 
 </ContentPage>

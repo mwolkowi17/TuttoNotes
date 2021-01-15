@@ -6,14 +6,15 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              x:Class="TuttoNotes.EntryForm">
-    <StackLayout>
-        <Entry x:Name="NoteTilte" Placeholder="New Title"/>
+    <ScrollView x:Name="scrollview">
+        <StackLayout>
+            <Entry x:Name="NoteTilte" Placeholder="New Title"/>
 
-        <Editor x:Name="NoteBody" Placeholder="Note..."  VerticalOptions="FillAndExpand"/>
+            <Editor x:Name="NoteBody" Placeholder="Note..."  VerticalOptions="FillAndExpand"  />
 
-        <DatePicker x:Name="NoteDate" Date="{x:Static sys:DateTime.Today}"/>
+            <DatePicker x:Name="NoteDate" Date="{x:Static sys:DateTime.Today}"/>
 
-        <!--<TableView Intent="Form">
+            <!--<TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Entry Name">
 
@@ -29,6 +30,8 @@
             </TableRoot>
 
         </TableView>-->
-        <Button Text="add note" Clicked="Button_Clicked"/>
-    </StackLayout>
+            <Button Text="add note" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+   
 </ContentPage>

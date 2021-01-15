@@ -35,5 +35,7 @@ namespace TuttoNotes
             await Navigation.PopAsync();
 
         }
+
+       
     }
 }
